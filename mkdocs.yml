@@ -1,0 +1,147 @@
+site_name: CloudHunting
+site_description: Methods and Techniques Mapped by MITRE ATT&CK and Leveraged by Sigma rules for Hunting Threats and Misconfigurations Over Your Cloud Environment 
+site_url: https://cloudhunting.io/
+
+docs_dir: docs
+
+nav:
+    - Home:
+      - Summary: 'index.md'
+      - Different Types of Cloud Logs\Events: 'types_of_events_logs.md'
+    - AWS:
+      - Initial Access:
+        - Exploit Public-Facing Application: 'aws/initial-access/exploit-public-facing-application.md'
+        - Trusted Relationship: 'aws/initial-access/trusted-relationship.md'
+        - Valid Accounts:
+          - Default Accounts: 'aws/initial-access/default-accounts.md'
+          - Cloud Accounts: 'aws/initial-access/cloud-accounts.md'
+      - Execution:
+        - Malicious Image: 'aws/execution/malicious-image.md'
+      - Persistence:
+        - Account Manipulation:
+          - Additional Cloud Credentials: ''
+          - Additional Cloud Roles: ''
+          - SSH Authorized Keys: ''
+        - Create Account:
+          - Cloud Account: ''
+        - Implant Internal Image: ''
+        - Valid Accounts:
+          - Default Accounts: ''
+          - Cloud Accounts: ''
+      - Privilege Escalation:
+        - Valid Accounts:
+          - Default Accounts: ''
+          - Cloud Accounts: ''
+      - Defense Evasion:
+        - Impair Defenses:
+          - Disable or Modify Tools: ''
+          - Disable or Modify Cloud Firewall: ''
+          - Disable Cloud Logs: ''
+        - Modify Cloud Compute Infrastructure:
+          - Create Snapshot: ''
+          - Create Cloud Instance: ''
+          - Delete Cloud Instance: ''
+          - Revert Cloud Instance: ''
+        - Unused/Unsupported Cloud Regions: ''
+        - Use Alternate Authentication Material:
+          - Web Session Cookie: ''
+        - Valid Accounts:
+          - Default Accounts: ''
+          - Cloud Accounts: ''
+      - Credential Access:
+        - Brute Force:
+          - Password Guessing: ""
+          - Password Spraying: ""
+          - Credential Stuffing: ""
+        - Forge Web Credentials:
+          - Web Cookies: ""
+          - SAML Tokens: ""
+        - Multi-Factor Authentication Request Generation: ""
+        - Network Sniffing: ""
+        - Unsecured Credentials:
+          - Credentials In Files: ""
+          - Cloud Instance Metadata API: ""
+      - Discovery:
+        - Account Discovery:
+          - Cloud Account: ""
+        - Cloud Infrastructure Discovery: ""
+        - Cloud Service Dashboard: ""
+        - Cloud Service Discovery: ""
+        - Cloud Storage Object Discovery: ""
+        - Network Service Discovery: ""
+        - Network Sniffing: ""
+        - Password Policy Discovery: ""
+        - Permission Groups Discovery:
+          - Cloud Groups: ""
+        - Software Discovery:
+          - Security Software Discovery: ""
+        - System Information Discovery: ""
+        - System Location Discovery: ""
+        - System Network Connections Discovery: ""
+      - Lateral Movement:
+        - Use Alternate Authentication Material:
+          - Web Session Cookie: ""
+      - Collection:
+        - Automated Collection: ""
+        - Data from Cloud Storage Object: ""
+        - Data from Information Repositories: ""
+        - Data Staged:
+          - Remote Data Staging: ""
+      - Exfiltration:
+        - Transfer Data to Cloud Account: ""
+      - Impact:
+        - Data Destruction: ""
+        - Data Encrypted for Impact: ""
+        - Defacement:
+          - External Defacement: ""
+        - Endpoint Denial of Service:
+          - Service Exhaustion Flood: ""
+          - Application Exhaustion Flood: ""
+          - Application or System Exploitation: ""
+        - Network Denial of Service:
+          - Direct Network Flood: ""
+          - Reflection Amplification: ""
+        - Resource Hijacking: ""
+    - GCP: 'gcp/gcp.md'
+
+theme:
+  name: material
+  logo: assets/images/favicon.ico
+  favicon: assets/images/favicon.ico
+  features:
+    - navigation.tabs
+    - navigation.indexes
+    - navigation.sections
+  palette:
+    - scheme: slate
+      primary: blue
+      toggle:
+        icon: material/toggle-switch-off-outline
+        name: Switch to Dark Mode
+    - scheme: default
+      primary: blue
+      toggle:
+        icon: material/toggle-switch
+        name: Switch to Light Mode
+
+plugins:
+  - search
+  - tags
+
+markdown_extensions:
+  - pymdownx.highlight:
+      anchor_linenums: true
+  - pymdownx.inlinehilite
+  - pymdownx.snippets
+  - pymdownx.superfences
+
+copyright: Copyright &copy; 2022 Asaf Aprozper
+
+extra:
+  generator: false
+  social:
+    - icon: fontawesome/brands/twitter 
+      link: https://twitter.com/3pun0x
+  analytics:
+    provider: google
+    property: G-XXXXXXXXXX
