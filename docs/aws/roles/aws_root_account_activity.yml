@@ -1,0 +1,19 @@
+title: Using of a Root account
+id: b3877a46-b2ff-4766-b36e-5ed311058cdd
+status: test
+description: Detects the sensitive usage of a Root account in a more timely manner (comparing to GuardDuty)
+author: asafaprozper
+date: 2022/11/01
+tags:
+    - attack.initial_access
+    - attack.t1078.001
+logsource:
+    product: aws
+    service: cloudtrail
+detection:
+    selection_source:
+        userIdentity.type: root
+    condition: selection_source
+falsepositives:
+    - Using of root account for invoice and payments request for AWS support
+level: high

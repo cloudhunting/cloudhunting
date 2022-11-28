@@ -1,0 +1,26 @@
+title: Ingress rule allowing access from any IP address
+id: 53bea7a4-d25e-444c-b385-3fad4b21d5f5
+status: test
+description: Detects the creation or modification of security group with a public exposure.
+author: asafaprozper
+date: 2022/10/31
+tags:
+    - attack.initial_access
+    - attack.t1190
+logsource:
+    product: aws
+    service: cloudtrail
+detection:
+    selection_source:
+        eventSource: ec2.amazonaws.com
+        eventName: 
+            - AuthorizeSecurityGroupIngress
+            - ModifySecurityGroupRules
+    keywords:
+        - '0.0.0.0/0'
+    filter:
+        sourceIPAddress: eks.amazonaws.com
+    condition: selection_source and keywords and not filter
+falsepositives:
+    - The security group created with 0.0.0.0, but the cloud resource is without external IP address\protected with WAF\behind LoadBalance so it not really publicly exposed.
+level: high
