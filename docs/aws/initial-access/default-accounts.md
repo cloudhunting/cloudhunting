@@ -4,7 +4,7 @@ tags:
   - T1078
   - T1078.001
 ---
-## Using of IAM User from External IP address
+### Using of IAM User from External IP address
 ``` yaml linenums="1"
 title: Using of IAM User from External IP address
 id: b3877a46-b2ff-4766-b36e-5ed311058cdd
@@ -51,6 +51,7 @@ detection:
     condition: selection_source
 falsepositives:
     - Using of root account for invoice and payments request for AWS support
+    - Using of root account for disabling region-lock
 level: high
 ```
 
@@ -59,7 +60,7 @@ level: high
 title: Anonymous Principle Successful Requests
 id: c8d96265-dde3-43a9-a7d2-ea48bca8e62a
 status: test
-description: Detects successful requests by Anonymous Principle which can lead for public exposure
+description: Detects successful requests by Anonymous Principle which can indicate on public exposure
 author: asafaprozper
 date: 2022/11/01
 tags:
@@ -77,9 +78,9 @@ detection:
         - eventName: PreflightRequest
     condition: selection_source and not filter
 falsepositives:
-    - Using of root account for invoice and payments request for AWS support
+    - Public exposure that meant to be exposed to anyone on the internet without authentication
 level: high
 ```
 
-### GuardDuty
+### GuardDuty Detections
     Policy:IAMUser/RootCredentialUsage
