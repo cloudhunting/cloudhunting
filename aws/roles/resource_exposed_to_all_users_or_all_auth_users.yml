@@ -1,0 +1,25 @@
+title: Resource Exposed to All Users or All Auth Users
+id: f26a54a1-6e8a-4be3-9adb-2d90acc0d5c8
+status: test
+description: Detects a policy which granting access to all users (public) or all authenticated AWS users.
+author: asafaprozper
+date: 2022/10/31
+tags:
+    - attack.initial_access
+    - attack.t1190
+logsource:
+    product: aws
+    service: cloudtrail
+detection:
+    selection_source:
+        eventName: 
+            - FunctionURLAllowPublicAccess
+    keywords:
+        - 'http://acs.amazonaws.com/groups/global/AllUsers'
+        - 'http://acs.amazonaws.com/groups/global/AuthenticatedUsers'
+        - '"Principal":"*"'
+        - '"Principal":{"AWS":"*"}'
+    condition: selection_source or keywords
+falsepositives:
+    - Sometimes send sns is publicy exposed to all users by default
+level: high
