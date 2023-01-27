@@ -5,104 +5,111 @@ site_url: https://cloudhunting.io/
 docs_dir: docs
 
 nav:
-    - Home:
-      - Summary: 'index.md'
-      - Different Types of Cloud Logs\Events: 'types_of_events_logs.md'
-    - AWS:
-      - Initial Access:
-        - Exploit Public-Facing Application: 'aws/initial-access/exploit-public-facing-application.md'
-        - Trusted Relationship: 'aws/initial-access/trusted-relationship.md'
-        - Valid Accounts:
-          - Default Accounts: 'aws/initial-access/default-accounts.md'
-          - Cloud Accounts: 'aws/initial-access/cloud-accounts.md'
-      - Execution:
-        - Malicious Image: 'aws/execution/malicious-image.md'
-      - Persistence:
-        - Account Manipulation:
-          - Additional Cloud Credentials: 'aws/persistence/account-manipulation/additional-cloud-credentials.md'
-          - Additional Cloud Roles: 'aws/persistence/account-manipulation/additional-cloud-roles.md'
-          - SSH Authorized Keys: 'aws/persistence/account-manipulation/ssh-authorized-keys.md'
-        - Create Account:
-          - Cloud Account: 'aws/persistence/create-account/cloud-account.md'
-        - Implant Internal Image: 'aws/persistence/implant-internal-image.md'
-        - Valid Accounts:
-          - Default Accounts: 'aws/persistence/valid-accounts/default-accounts.md'
-          - Cloud Accounts: 'aws/persistence/valid-accounts/cloud-accounts.md'
-      - Privilege Escalation:
-        - Valid Accounts:
-          - Default Accounts: 'aws/privilege-escalation/valid-accounts/default-accounts.md'
-          - Cloud Accounts: 'aws/privilege-escalation/valid-accounts/cloud-accounts.md'
-      - Defense Evasion:
-        - Impair Defenses:
-          - Disable or Modify Tools: 'aws/defense-evasion/impair-defenses/disable-or-modify-tools.md'
-          - Disable or Modify Cloud Firewall: 'aws/defense-evasion/impair-defenses/disable-or-cloud-firewall.md'
-          - Disable Cloud Logs: 'aws/defense-evasion/impair-defenses/disable-cloud-logs.md'
-        - Modify Cloud Compute Infrastructure:
-          - Create Snapshot: 'aws/defense-evasion/modify-cloud-compute-infrastructure/create-snapshot.md'
-          - Create Cloud Instance: 'aws/defense-evasion/modify-cloud-compute-infrastructure/create-cloud-instance.md'
-          - Delete Cloud Instance: 'aws/defense-evasion/modify-cloud-compute-infrastructure/delete-cloud-instance.md'
-          - Revert Cloud Instance: 'aws/defense-evasion/modify-cloud-compute-infrastructure/revert-cloud-instance.md'
-        - Unused/Unsupported Cloud Regions: 'aws/defense-evasion/unused-unsupported-cloud-regions.md'
-        - Use Alternate Authentication Material:
-          - Web Session Cookie: 'aws/defense-evasion/use-alternate-authentication-material/web-session-cookie.md'
-        - Valid Accounts:
-          - Default Accounts: 'aws/defense-evasion/valid-accounts/default-accounts.md'
-          - Cloud Accounts: 'aws/defense-evasion/valid-accounts/cloud-accounts.md'
-      - Credential Access:
-        - Brute Force:
-          - Password Guessing: "aws/credential-access/brute-force/password-guessing.md"
-          - Password Spraying: "aws/credential-access/brute-force/password-spraying.md"
-          - Credential Stuffing: "aws/credential-access/brute-force/credential-stuffing.md"
-        - Forge Web Credentials:
-          - Web Cookies: "aws/credential-access/forge-web-credentials/web-cookies.md"
-          - SAML Tokens: "aws/credential-access/forge-web-credentials/saml-tokens.md"
-        - Multi-Factor Authentication Request Generation: "aws/credential-access/multi-Factor-authentication-request-generation.md"
-        - Network Sniffing: "aws/credential-access/network-sniffing.md"
-        - Unsecured Credentials:
-          - Credentials In Files: "aws/credential-access/unsecured-credentials/credentials-in-files.md"
-          - Cloud Instance Metadata API: "aws/credential-access/cloud-instance-metadata-api/credentials-in-files.md"
-      - Discovery:
-        - Account Discovery:
-          - Cloud Account: "aws/discovery/account-discovery/cloud-account.md"
-        - Cloud Infrastructure Discovery: "aws/discovery/cloud-infrastructure-discovery.md"
-        - Cloud Service Dashboard: "aws/discovery/cloud-service-dashboard.md"
-        - Cloud Service Discovery: "aws/discovery/cloud-service-discovery.md"
-        - Cloud Storage Object Discovery: "aws/discovery/cloud-storage-object-discovery.md"
-        - Network Service Discovery: "aws/discovery/network-service-discovery.md"
-        - Network Sniffing: "aws/discovery/network-sniffing.md"
-        - Password Policy Discovery: "aws/discovery/password-policy-discovery.md"
-        - Permission Groups Discovery:
-          - Cloud Groups: "aws/discovery/permission-groups-discovery/cloud-groups.md"
-        - Software Discovery:
-          - Security Software Discovery: "aws/discovery/software-discovery/security-software-discovery.md"
-        - System Information Discovery: "aws/discovery/system-information-discovery.md"
-        - System Location Discovery: "aws/discovery/system-location-discovery.md"
-        - System Network Connections Discovery: "aws/discovery/system-network-connections-discovery.md"
-      - Lateral Movement:
-        - Use Alternate Authentication Material:
-          - Web Session Cookie: "aws/lateral-movement/use-alternate-authentication-material/web-session-cookie.md"
-      - Collection:
-        - Automated Collection: "aws/collection/automated-collection.md"
-        - Data from Cloud Storage Object: "aws/collection/data-from-cloud-storage-object.md"
-        - Data from Information Repositories: "aws/collection/data-from-information-repositories.md"
-        - Data Staged:
-          - Remote Data Staging: "aws/collection/data-staged/remote-data-staging.md"
-      - Exfiltration:
-        - Transfer Data to Cloud Account: "aws/exfiltration/transfer-data-to-cloud-account.md"
-      - Impact:
-        - Data Destruction: "aws/impact/data-destruction.md"
-        - Data Encrypted for Impact: "aws/impact/data-encrypted-for-impact.md"
-        - Defacement:
-          - External Defacement: "aws/impact/defacement/external-defacement.md"
-        - Endpoint Denial of Service:
-          - Service Exhaustion Flood: "aws/impact/endpoint-denial-of-service/service-exhaustion-flood.md"
-          - Application Exhaustion Flood: "aws/impact/endpoint-denial-of-service/application-exhaustion-flood.md"
-          - Application or System Exploitation: "aws/impact/endpoint-denial-of-service/application-or-system-exploitation.md"
-        - Network Denial of Service:
-          - Direct Network Flood: "aws/impact/network-denial-of-service/direct-network-flood.md"
-          - Reflection Amplification: "aws/impact/network-denial-of-service/reflection-amplification.md"
-        - Resource Hijacking: "aws/impact/resource-hijacking.md"
-    - GCP: 'gcp/gcp.md'
+    - Home: 'index.md'
+    - MITRE ATT&CK Cloud: "cloud_mitre_attack.md"
+    - Sigma Rules: 
+      - Sigma Rules: "sigma_rules.md"
+      - Utilizing Sigma Rules for CloudHunting: "utilizing_igma_rules_for_cloudhunting.md"
+      - Tactics and Techniques:
+        - Initial Access:
+          - Exploit Public-Facing Application: 'aws/initial-access/exploit-public-facing-application.md'
+          - Trusted Relationship: 'aws/initial-access/trusted-relationship.md'
+          - Valid Accounts:
+            - Default Accounts: 'aws/initial-access/default-accounts.md'
+            - Cloud Accounts: 'aws/initial-access/cloud-accounts.md'
+        - Execution:
+          - Malicious Image: 'aws/execution/malicious-image.md'
+        - Persistence:
+          - Account Manipulation:
+            - Additional Cloud Credentials: 'aws/persistence/account-manipulation/additional-cloud-credentials.md'
+            - Additional Cloud Roles: 'aws/persistence/account-manipulation/additional-cloud-roles.md'
+            - SSH Authorized Keys: 'aws/persistence/account-manipulation/ssh-authorized-keys.md'
+          - Create Account:
+            - Cloud Account: 'aws/persistence/create-account/cloud-account.md'
+          - Implant Internal Image: 'aws/persistence/implant-internal-image.md'
+          - Valid Accounts:
+            - Default Accounts: 'aws/persistence/valid-accounts/default-accounts.md'
+            - Cloud Accounts: 'aws/persistence/valid-accounts/cloud-accounts.md'
+        - Privilege Escalation:
+          - Valid Accounts:
+            - Default Accounts: 'aws/privilege-escalation/valid-accounts/default-accounts.md'
+            - Cloud Accounts: 'aws/privilege-escalation/valid-accounts/cloud-accounts.md'
+        - Defense Evasion:
+          - Impair Defenses:
+            - Disable or Modify Tools: 'aws/defense-evasion/impair-defenses/disable-or-modify-tools.md'
+            - Disable or Modify Cloud Firewall: 'aws/defense-evasion/impair-defenses/disable-or-cloud-firewall.md'
+            - Disable Cloud Logs: 'aws/defense-evasion/impair-defenses/disable-cloud-logs.md'
+          - Modify Cloud Compute Infrastructure:
+            - Create Snapshot: 'aws/defense-evasion/modify-cloud-compute-infrastructure/create-snapshot.md'
+            - Create Cloud Instance: 'aws/defense-evasion/modify-cloud-compute-infrastructure/create-cloud-instance.md'
+            - Delete Cloud Instance: 'aws/defense-evasion/modify-cloud-compute-infrastructure/delete-cloud-instance.md'
+            - Revert Cloud Instance: 'aws/defense-evasion/modify-cloud-compute-infrastructure/revert-cloud-instance.md'
+          - Unused/Unsupported Cloud Regions: 'aws/defense-evasion/unused-unsupported-cloud-regions.md'
+          - Use Alternate Authentication Material:
+            - Web Session Cookie: 'aws/defense-evasion/use-alternate-authentication-material/web-session-cookie.md'
+          - Valid Accounts:
+            - Default Accounts: 'aws/defense-evasion/valid-accounts/default-accounts.md'
+            - Cloud Accounts: 'aws/defense-evasion/valid-accounts/cloud-accounts.md'
+        - Credential Access:
+          - Brute Force:
+            - Password Guessing: "aws/credential-access/brute-force/password-guessing.md"
+            - Password Spraying: "aws/credential-access/brute-force/password-spraying.md"
+            - Credential Stuffing: "aws/credential-access/brute-force/credential-stuffing.md"
+          - Forge Web Credentials:
+            - Web Cookies: "aws/credential-access/forge-web-credentials/web-cookies.md"
+            - SAML Tokens: "aws/credential-access/forge-web-credentials/saml-tokens.md"
+          - Multi-Factor Authentication Request Generation: "aws/credential-access/multi-Factor-authentication-request-generation.md"
+          - Network Sniffing: "aws/credential-access/network-sniffing.md"
+          - Unsecured Credentials:
+            - Credentials In Files: "aws/credential-access/unsecured-credentials/credentials-in-files.md"
+            - Cloud Instance Metadata API: "aws/credential-access/cloud-instance-metadata-api/credentials-in-files.md"
+        - Discovery:
+          - Account Discovery:
+            - Cloud Account: "aws/discovery/account-discovery/cloud-account.md"
+          - Cloud Infrastructure Discovery: "aws/discovery/cloud-infrastructure-discovery.md"
+          - Cloud Service Dashboard: "aws/discovery/cloud-service-dashboard.md"
+          - Cloud Service Discovery: "aws/discovery/cloud-service-discovery.md"
+          - Cloud Storage Object Discovery: "aws/discovery/cloud-storage-object-discovery.md"
+          - Network Service Discovery: "aws/discovery/network-service-discovery.md"
+          - Network Sniffing: "aws/discovery/network-sniffing.md"
+          - Password Policy Discovery: "aws/discovery/password-policy-discovery.md"
+          - Permission Groups Discovery:
+            - Cloud Groups: "aws/discovery/permission-groups-discovery/cloud-groups.md"
+          - Software Discovery:
+            - Security Software Discovery: "aws/discovery/software-discovery/security-software-discovery.md"
+          - System Information Discovery: "aws/discovery/system-information-discovery.md"
+          - System Location Discovery: "aws/discovery/system-location-discovery.md"
+          - System Network Connections Discovery: "aws/discovery/system-network-connections-discovery.md"
+        - Lateral Movement:
+          - Use Alternate Authentication Material:
+            - Web Session Cookie: "aws/lateral-movement/use-alternate-authentication-material/web-session-cookie.md"
+        - Collection:
+          - Automated Collection: "aws/collection/automated-collection.md"
+          - Data from Cloud Storage Object: "aws/collection/data-from-cloud-storage-object.md"
+          - Data from Information Repositories: "aws/collection/data-from-information-repositories.md"
+          - Data Staged:
+            - Remote Data Staging: "aws/collection/data-staged/remote-data-staging.md"
+        - Exfiltration:
+          - Transfer Data to Cloud Account: "aws/exfiltration/transfer-data-to-cloud-account.md"
+        - Impact:
+          - Data Destruction: "aws/impact/data-destruction.md"
+          - Data Encrypted for Impact: "aws/impact/data-encrypted-for-impact.md"
+          - Defacement:
+            - External Defacement: "aws/impact/defacement/external-defacement.md"
+          - Endpoint Denial of Service:
+            - Service Exhaustion Flood: "aws/impact/endpoint-denial-of-service/service-exhaustion-flood.md"
+            - Application Exhaustion Flood: "aws/impact/endpoint-denial-of-service/application-exhaustion-flood.md"
+            - Application or System Exploitation: "aws/impact/endpoint-denial-of-service/application-or-system-exploitation.md"
+          - Network Denial of Service:
+            - Direct Network Flood: "aws/impact/network-denial-of-service/direct-network-flood.md"
+            - Reflection Amplification: "aws/impact/network-denial-of-service/reflection-amplification.md"
+          - Resource Hijacking: "aws/impact/resource-hijacking.md"
+    - Resources:
+      - Blog Posts: 'blog_posts.md'
+      - Cloud Logs:
+        - AWS: 'aws_logs_types.md'
+        - GCP: 'gcp_logs_types.md'
+    - About Us: "about_us.md"
 
 theme:
   name: material
@@ -112,6 +119,7 @@ theme:
     - navigation.tabs
     - navigation.indexes
     - navigation.sections
+    - content.tabs.link
   palette:
     - scheme: slate
       primary: blue
@@ -131,13 +139,17 @@ plugins:
   - tags
 
 markdown_extensions:
+  - tables
   - pymdownx.highlight:
       anchor_linenums: true
   - pymdownx.inlinehilite
   - pymdownx.snippets
   - pymdownx.superfences
+  - pymdownx.tabbed:
+      alternate_style: true 
 
-copyright: Copyright &copy; 2022 Asaf Aprozper
+
+copyright: Copyright &copy; 2023 CloudHunting
 
 extra:
   generator: false

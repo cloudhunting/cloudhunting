@@ -1,0 +1,2 @@
+## What Are Sigma Rules?
+Sigma rules are a way to detect and respond to potential threats and misconfigurations in your IT environment. They are a set of rules written in the Sigma rule language, which is a simple and flexible language that allows you to express complex event-based detection logic in a concise and human-readable format. 
