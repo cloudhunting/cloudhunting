@@ -3,6 +3,5 @@ CloudHunting is a community-driven website that provides methods and techniques 
 
 Join our community of experts and stay informed on the latest developments in cloud security. With CloudHunting, you'll have the resources you need to stay vigilant and proactive in identifying and hunting for potential threats to your cloud environment. Together, we can make cloud environments more secure. Thanks for visiting, and happy hunting!
 
-
 ## Disclaimer
 The information provided on this website is for general informational purposes only. CloudHunting makes no representations or warranties of any kind regarding the completeness, accuracy or suitability of the information provided. Use of this website is at your own risk.

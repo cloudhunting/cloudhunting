@@ -8,8 +8,8 @@ nav:
     - Home: 'index.md'
     - MITRE ATT&CK Cloud: "cloud_mitre_attack.md"
     - Sigma Rules: 
-      - Sigma Rules: "sigma_rules.md"
-      - Utilizing Sigma Rules for CloudHunting: "utilizing_igma_rules_for_cloudhunting.md"
+      - What Are Sigma Rules?: "sigma_rules.md"
+      - Mapping Sigma Rules by MITRE ATT&CK Cloud: "utilizing_igma_rules_for_cloudhunting.md"
       - Tactics and Techniques:
         - Initial Access:
           - Exploit Public-Facing Application: 'aws/initial-access/exploit-public-facing-application.md'
@@ -106,7 +106,7 @@ nav:
           - Resource Hijacking: "aws/impact/resource-hijacking.md"
     - Resources:
       - Blog Posts: 'blog_posts.md'
-      - Cloud Logs:
+      - Types of Cloud Logs:
         - AWS: 'aws_logs_types.md'
         - GCP: 'gcp_logs_types.md'
     - About Us: "about_us.md"
@@ -147,6 +147,11 @@ markdown_extensions:
   - pymdownx.superfences
   - pymdownx.tabbed:
       alternate_style: true 
+  - pymdownx.superfences:
+      custom_fences:
+        - name: mermaid
+          class: mermaid
+          format: !!python/name:pymdownx.superfences.fence_code_format
 
 
 copyright: Copyright &copy; 2023 CloudHunting
