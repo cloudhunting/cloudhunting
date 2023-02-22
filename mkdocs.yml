@@ -6,7 +6,9 @@ docs_dir: docs
 
 nav:
     - Home: 'index.md'
-    - MITRE ATT&CK Cloud: "cloud_mitre_attack.md"
+    - MITRE ATT&CK Cloud:
+      - What is it the framework?: "cloud_mitre_attack.md"
+      - Cloud Framework Categories: "cloud_framework_categories.md"
     - Sigma Rules: 
       - What Are Sigma Rules?: "sigma_rules.md"
       - Mapping Sigma Rules by MITRE ATT&CK Cloud: "utilizing_igma_rules_for_cloudhunting.md"
@@ -18,7 +20,9 @@ nav:
             - Default Accounts: 'rules_mapped_by_technique/initial-access/default-accounts.md'
             - Cloud Accounts: 'rules_mapped_by_technique/initial-access/cloud-accounts.md'
         - Execution:
-          - Malicious Image: 'rules_mapped_by_technique/execution/malicious-image.md'
+          - Serverless Execution: 'rules_mapped_by_technique/execution/serverless-execution.md'
+          - User Execution:
+            - Malicious Image: 'rules_mapped_by_technique/execution/malicious-image.md'
         - Persistence:
           - Account Manipulation:
             - Additional Cloud Credentials: 'rules_mapped_by_technique/persistence/account-manipulation/additional-cloud-credentials.md'

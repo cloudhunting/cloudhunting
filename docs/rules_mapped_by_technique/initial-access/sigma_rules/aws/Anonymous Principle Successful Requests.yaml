@@ -1,0 +1,23 @@
+title: Anonymous Principle Successful Requests
+id: c8d96265-dde3-43a9-a7d2-ea48bca8e62a
+status: test
+description: Detects successful requests by Anonymous Principle which can indicate on public exposure
+author: asafaprozper
+date: 2022/11/01
+tags:
+    - attack.initial_access
+    - attack.t1078.001
+logsource:
+    product: aws
+    service: cloudtrail
+detection:
+    selection_source:
+        userIdentity.accountId: ANONYMOUS_PRINCIPAL
+        errorCode: success
+    filter:
+        - userAgent: "[Amazon CloudFront]"
+        - eventName: PreflightRequest
+    condition: selection_source and not filter
+falsepositives:
+    - Public exposure that meant to be exposed to anyone on the internet without authentication
+level: high
