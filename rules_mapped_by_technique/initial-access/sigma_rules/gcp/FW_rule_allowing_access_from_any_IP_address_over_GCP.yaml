@@ -1,0 +1,27 @@
+title: FW rule allowing access from any IP address over GCP
+id: a81899a4-b0f3-4f5f-a0f4-62f76962321a
+status: test
+description: Detects the creation or update of FW rule with a public exposure.
+author: asafaprozper
+date: 2022/11/01
+tags:
+    - attack.initial_access
+    - attack.t1190
+logsource:
+    product: gcp
+    service: compute.googleapis.com
+detection:
+    selection_source:
+        data.resource.type: gce_firewall_rule
+        data.protoPayload.methodName: 
+            - v1.compute.firewalls.insert
+            - v1.compute.firewalls.update
+            - v1.compute.firewalls.patch
+        data.protoPayload.request.alloweds:
+            - "*"
+    keywords:
+        - '0.0.0.0/0'
+    condition: selection_source and keywords
+falsepositives:
+    - The security group created with 0.0.0.0, but the cloud resource is without external IP address or protected with WAF rules for specific IP ranges.
+level: high
